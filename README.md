@@ -21,7 +21,7 @@
 
 ## Installation (Ubuntu 24.04, Python 3.12)
 
-### 1) Create & activate venv
+1) Create & activate venv
 ```bash
 cd synthetic-data-factory
 python3.12 -m venv .venv
