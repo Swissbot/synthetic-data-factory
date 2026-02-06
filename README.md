@@ -40,7 +40,7 @@ pip install -e .
 sdf --help
 ```
 
-# Quickstart (CLI)
+## Quickstart (CLI)
 Generate a dataset (baseline)
 ```bash
 mkdir -p data
@@ -51,28 +51,28 @@ data/demo/images/*.png
 data/demo/annotations/coco.json
 (optional) data/demo/labels/*.txt   # if --yolo is used
 
-# Generate YOLO labels as well
+## Generate YOLO labels as well
 ```bash
 sdf synth --n 50 --out data/yolo_demo --seed 42 --yolo
 ```
-# Create a preview grid image
+## Create a preview grid image
 ```bash
 mkdir -p docs
 sdf preview --data data/demo --out docs/preview_grid.png --k 16
 ```
 
-# Print dataset stats
+## Print dataset stats
 ```bash
 sdf report --data data/demo
 ```
 
-# Themes (baseline vs fasteners)
+## Themes (baseline vs fasteners)
 
 --theme baseline (default): circle, hex, slot
 
 --theme fasteners: washer, hex_head, torx_head
 
-# Example:
+## Example:
 ```bash
 sdf synth --n 80 --out data/fasteners_demo --seed 42 --theme fasteners
 sdf preview --data data/fasteners_demo --out docs/preview_fasteners.png --k 16
@@ -87,7 +87,7 @@ Baseline (circle/hex/slot)
 Fasteners theme (washer/hex_head/torx_head)
 <img src="docs/preview_fasteners.png" alt="Fasteners preview grid" width="900" />
 
-# Makefile shortcuts (optional)
+## Makefile shortcuts (optional)
 If you prefer make:
 ```bash
 make setup
@@ -96,20 +96,20 @@ make preview
 make report
 ```
 
-# CLI Reference
-# baseline
+## CLI Reference
+### baseline
 ```bash
 sdf synth --n 200 --out data/demo --seed 42
 ```
-# yolo export
+### yolo export
 ```bash
 sdf synth --n 200 --out data/yolo_demo --seed 42 --yolo
 ```
-# fasteners theme
+### fasteners theme
 ```bash
 sdf synth --n 200 --out data/fasteners_demo --seed 42 --theme fasteners
 ```
-# preview + report
+### preview + report
 ```bash
 sdf preview --data data/demo --out docs/preview_grid.png --k 16
 sdf report  --data data/demo
